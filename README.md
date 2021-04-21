@@ -6,6 +6,8 @@ After installing the code, run command npm install then node index.js to install
 
 Test Case report: https://docs.google.com/document/d/1QpZcTeIz92SrBOIY4BgP8LiDQA5IVhujBU7m8nwg0Dc/edit?usp=sharing
 
+SRS: https://docs.google.com/document/d/12hZVLolNKJt18U0Xj3wqx-QzF7K4sVPx3ZLKiqqN744/edit?usp=sharing
+
 Group Members:
 Ashish Kumar Saini (1801031)
 Harshit Karan (1801073)
