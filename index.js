@@ -826,7 +826,7 @@ async function storeDatabase(name, heading, body, post, created, fileId ){
 }
 
   async function storeFiles(auth) {
-    fileName="C:/Users/ASUS/Downloads/prac5/public/data/"+uploadFileName
+    fileName=__dirname+'/public/data'+uploadFileName
     if(!uploadFileName){
         storeDatabase(uploadName, headingUpload, bodyUpload, postUpload, createdUpload)
     }
