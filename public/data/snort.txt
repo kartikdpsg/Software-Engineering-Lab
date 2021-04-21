@@ -1,0 +1,31 @@
+Start of assignment: 
+
+Launch ec2 server with ubuntu as OS on aws
+
+allow all traffic on security group
+
+
+https://hub.docker.com/r/linton/docker-snort/
+
+sudo apt install docker.io
+sudo docker pull linton/docker-snort 
+sudo docker run -it --rm --net=host linton/docker-snort /bin/bash
+vi /etc/snort/rules/local.rules
+
+paste these rules:
+ 
+alert icmp any any -> any any (msg:"Pinging...";sid:1000004;)
+alert tcp any any -> $HOME_NET 21 (msg:"FTP connection attempt"; sid:1000002; rev:1;)
+alert tcp any any -> $HOME_NET 80 (msg:"HTTP connection attempt";sid:1000005;)
+
+
+snort -i eth0 -c /etc/snort/etc/snort.conf -A console
+
+
+Run these on a new local terminal on your pc and see the messages on the the terminal with ssh connection to the server :
+
+replace these ip addresss with your ec2 server ip address:
+
+ping 18.218.177.208
+curl --head 18.218.177.208
+ftp 18.218.177.208

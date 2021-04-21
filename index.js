@@ -826,7 +826,7 @@ async function storeDatabase(name, heading, body, post, created, fileId ){
 }
 
   async function storeFiles(auth) {
-    fileName=__dirname+'/public/data'+uploadFileName
+    fileName=__dirname+'/public/data/'+uploadFileName
     if(!uploadFileName){
         storeDatabase(uploadName, headingUpload, bodyUpload, postUpload, createdUpload)
     }
@@ -989,7 +989,6 @@ app.post('/addClub', async (req, res)=>{
 
 })
 
-let port = process.env.PORT
 if(port==null || port==""){
     port = 3000
 }
